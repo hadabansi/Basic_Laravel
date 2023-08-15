@@ -10,6 +10,6 @@ class usercontroller extends Controller
     function fetchdata()
     {
     $data=usermodel::all();
-  
+    return view("fetchdata",["data"->$data]);
     }
 }
