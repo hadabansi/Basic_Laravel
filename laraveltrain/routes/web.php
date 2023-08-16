@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\usercontroller;
 
 
 /*
@@ -22,4 +23,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('new',[App\Http\Controllers\usercontroller::class, 'fetchdata'])->name('fetch');
+Route::get('new',[usercontroller::class, 'fetchdata'])->name('fetch');
+
+Route::get('users', [usercontroller::class, 'fetchyajradata'])->name('users');
