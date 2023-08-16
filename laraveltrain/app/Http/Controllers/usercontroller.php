@@ -9,7 +9,7 @@ class usercontroller extends Controller
 {
     function fetchdata()
     {
-    $data=usermodel::paginate(5);
+    $data=usermodel::all()->toarray();
     // dd($data);
     return view("fetchdata",compact("data"));
     }
