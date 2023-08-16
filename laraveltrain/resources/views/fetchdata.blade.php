@@ -1,3 +1,5 @@
+
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -29,7 +31,6 @@
 						<th>Name</th>
 						<th>Email</th>
 						<th>Address</th>
-						<th>Phone</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
@@ -40,7 +41,6 @@
         				<td>{{ $member['name']}}</td>
         				<td>{{ $member['address']}}</td>
         				<td>{{ $member['email']}}</td>
-        				<td>{{ $member['phone_number']}}</td>
 						<td>
 							<a href={{"editcrud/".$member['id']}} class="edit"><i class="material-icons" title="Edit">&#xE254;</i></a>
 							<a href={{"deletecrud/".$member['id']}} class="delete"><i class="material-icons"title="Delete">&#xE872;</i></a>
@@ -58,4 +58,4 @@
         {{$data->links()}}
     </div>
 </div>
-</div>
+</div> 
