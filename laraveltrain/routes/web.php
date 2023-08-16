@@ -26,3 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('new',[usercontroller::class, 'fetchdata'])->name('fetch');
 
 Route::get('users', [usercontroller::class, 'fetchyajradata'])->name('users');
+    
+Route::get('edit/{id}', [usercontroller::class, 'edityajradata'])->name('users.edit');
+
+Route::post('update/{id}', [usercontroller::class, 'updateyajradata'])->name('users.update');
