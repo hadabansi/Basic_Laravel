@@ -11,7 +11,6 @@
 					<tr>
                         <th>Id</th>
 						<th>Name</th>
-						<th>Address</th>
 						<th>Email</th>
 					</tr>
 				</thead>
@@ -20,7 +19,6 @@
 					<tr>
 						<td>{{ $member['id']}}</td>
         				<td>{{ $member['name']}}</td>
-        				<td>{{ $member['address']}}</td>
         				<td>{{ $member['email']}}</td>
 					
 					</tr> 

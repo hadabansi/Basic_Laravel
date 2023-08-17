@@ -12,7 +12,7 @@ class usercontroller extends Controller
 {
     function fetchdata()
     {
-    $data=usermodel::all()->toarray();
+    $data=User::all()->toarray();
     // dd($data);
     return view("fetchdata",compact("data"));
     }
