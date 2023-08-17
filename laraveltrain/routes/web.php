@@ -34,3 +34,7 @@ Route::post('update/{id}', [usercontroller::class, 'updateyajradata'])->name('us
 Route::get('delete/{id}', [usercontroller::class, 'deleteyajradata'])->name('users.delete');
 
 Route::get('mail/{id}', [usercontroller::class, 'mailyajradata'])->name('users.mail');
+
+
+Route::post('create', [usercontroller::class, 'createyajradata'])->name('users.create');
+Route::view('create','yajracreate');

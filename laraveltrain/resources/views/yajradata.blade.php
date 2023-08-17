@@ -4,7 +4,9 @@
 <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"/>
 <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
  
+<a href={{route('users.create')}} class="btn btn-success"><span>Add New Employee</span></a><br>
 			<table id="myTable">
 				<thead>
 					<tr>

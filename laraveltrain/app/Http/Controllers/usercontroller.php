@@ -24,12 +24,12 @@ class usercontroller extends Controller
         if ($request->ajax()) {
             $users = User::query();
             return Datatables::of($users)
-            ->setRowClass('{{ $id % 2 == 0 ? "alert-success" : "alert-warning" }}')
+            ->setRowClass('{{ $id % 2 == 0 ? "alert-success" : "alert-danger" }}')
             ->addColumn('action', function($row){
      
-                $btn = ' <button class="btn-success"><a href="'.route('users.edit', $row->id).'">Edit</a></button>';
-                $btn2=' <button class="btn-success"><a href="'.route('users.delete', $row->id).'">Delete</a></button>';
-                $btn3=' <button class="btn-success"><a href="'.route('users.mail', $row->id).'">Send Mail</a></button>';
+                $btn = '<a href="'.route('users.edit', $row->id).'" class="btn btn-success"><span>Edit</span></a>  ';
+                $btn2='<a href="'.route('users.delete', $row->id).'" class="btn btn-danger">Delete</a>  ';
+                $btn3=' <a href="'.route('users.mail', $row->id).'" class="btn btn-primary">Send Mail</a>';
                  return $btn.$btn2.$btn3;
          })
          ->rawColumns(['action'])
@@ -76,5 +76,14 @@ class usercontroller extends Controller
     Mail::to($email->email)->send(new datamail($email));
 
     return 'Email sent successfully!';
+  }
+  function createyajradata(Request $req)
+  {
+    $data=new User;
+    $data->name=$req->name;
+    $data->email=$req->email;
+    $data->password=$req->password;
+    $data->save();
+    return redirect()->route('users');
   }
 }
