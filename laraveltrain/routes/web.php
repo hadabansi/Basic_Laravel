@@ -30,3 +30,7 @@ Route::get('users', [usercontroller::class, 'fetchyajradata'])->name('users');
 Route::get('edit/{id}', [usercontroller::class, 'edityajradata'])->name('users.edit');
 
 Route::post('update/{id}', [usercontroller::class, 'updateyajradata'])->name('users.update');
+
+Route::get('delete/{id}', [usercontroller::class, 'deleteyajradata'])->name('users.delete');
+
+Route::get('mail/{id}', [usercontroller::class, 'mailyajradata'])->name('users.mail');
